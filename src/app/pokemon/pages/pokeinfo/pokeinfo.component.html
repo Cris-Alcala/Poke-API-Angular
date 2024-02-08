@@ -1,0 +1,53 @@
+<div class="pokeinfo">
+    <p *ngIf="pokemon===undefined">Cargando...</p>
+    <div class="mainInfo" *ngIf="pokemon!==undefined">
+        <div class="pokemonPrincipal">
+            <div class="pokemonPrincipal__image">
+                <img src="{{pokemon.sprites.other?.home?.front_default}}" alt="Pokemon image" width="150">
+            </div>
+            <div class="pokemonPrincipal__name">
+                <p [style.color]="pokemon.types[0].type.name | pokemon">{{pokemon.name}}</p>
+            </div>
+            <div class="pokemonPrincipal__specie">
+                <p>Species: {{pokemon.species.name}}</p>
+            </div>
+            <div class="pokemonPrincipal__type">
+                <p>Type:</p>
+                <div class="type">
+                    @for (type of pokemon.types; track $index) {
+                        <p>{{type.type.name}}</p>
+                    }
+                </div>
+            </div>
+            <div class="pokemonPrincipal__moreinfo">
+                <p>{{pokemon.types[0].type.name==='normal'?'Pokemon is not dangerous':'Pokemon can be dangerous'}}</p>
+            </div>
+        </div>
+        <div class="pokemonDetailed">
+            <div class="pokemonDetailed__baseXP">
+                <p>XP base:</p>
+                <p>{{pokemon.base_experience}}</p>
+            </div>
+            <div class="pokemonDetailed__heigth">
+                <p>Height:</p>
+                <p>{{pokemon.height}}</p>
+            </div>
+            <div class="pokemonDetailed__weigth">
+                <p>Weight:</p>
+                <p>{{pokemon.weight}}</p>
+            </div>
+            <div class="pokemonDetailed__order">
+                <p>Order:</p>
+                <p>{{pokemon.order}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="pokemonAbilities" *ngIf="pokemon!==undefined">
+        <p>Abilities</p>
+        <div class="abilities">
+            @for (ability of pokemon.abilities; track $index) {
+                <p>{{ability.ability.name}}</p>
+            }
+        </div>
+    </div>
+</div>

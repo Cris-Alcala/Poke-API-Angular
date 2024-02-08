@@ -1,0 +1,8 @@
+<div class="moreInfo">
+    @for (item of objects; track $index) {
+        <div class="moreInfo__item">
+            <p>{{item.name}}</p>
+            <img [src]="item.sprite" alt="" width="50">
+        </div>
+    }
+</div>

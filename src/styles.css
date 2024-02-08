@@ -1,1 +1,207 @@
 /* You can add global styles to this file, and also import other style files */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 0, 0.403); 
+    border-radius: .5em;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: yellow; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #040708;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    border: 1px solid black;
+}
+.header__img {
+    filter: drop-shadow(1px 5px 10px rgba(255, 255, 255, 0.494));
+    background-color: transparent;
+}
+.navbar__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+}
+.navbar__links a {
+    text-decoration: none;
+    list-style: none;
+    font-weight: bold;
+    font-size: 1.5em;
+    transition: all 300ms;
+    color: white;
+}
+.navbar__links a:hover {
+    color: #ffcb08;
+}
+.navbar__links a.active {
+    color: #ffcb08;
+}
+footer {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    justify-content: center;
+    margin: 2em;
+}
+footer img {
+    filter: invert();
+    background-color: transparent;
+    transition: all 300ms;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    color: white;
+}
+.list app-searchbox {
+    margin: 2em;
+}
+.list input {
+    outline: none;
+    padding: 1em;
+    color: white;
+    border: 3px solid white;
+    border-radius: .5em;
+}
+.list .pokemons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.list .pokemons .pokemon {
+    padding: 1em;
+    border: 1px solid yellow;
+    margin: .5em;
+    text-align: center;
+    border-radius: .5em;
+}
+.list .pokemons .pokemon a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    transition: all 300ms;
+}
+.list .pokemons .pokemon a:hover {
+    color: yellow;
+}
+.pokeinfo .pokemonPrincipal__specie,
+.pokeinfo .pokemonPrincipal__type,
+.pokeinfo .pokemonPrincipal__moreinfo, 
+.pokeinfo .pokemonDetailed, 
+.pokeinfo .pokemonAbilities {
+    color: white;
+}
+
+.pokeinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2em;
+}
+
+.mainInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+.mainInfo .pokemonPrincipal {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.mainInfo .pokemonPrincipal__name {
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+.mainInfo .pokemonPrincipal__type {
+    display: flex;
+    gap: 1em;
+}
+.mainInfo .type {
+    display: flex;
+    gap: 1em;
+}
+.mainInfo .pokemonDetailed {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.mainInfo .pokemonDetailed__baseXP,
+.mainInfo .pokemonDetailed__heigth,
+.mainInfo .pokemonDetailed__weigth,
+.mainInfo .pokemonDetailed__order {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+.pokemonAbilities {
+    display: flex;
+    flex-direction: column;
+    margin: 3em;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    border: 1px solid white;
+    padding: 1em;
+    border-radius: .5em;
+    color: rgb(130, 76, 76);
+}
+.pokemonAbilities .abilities {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+}
+.moreInfo {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    margin-top: 2em;
+    padding: 2em;
+}
+.moreInfo__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: .5em;
+    border: 1px solid yellow;
+    min-width: 200px;
+    max-width: 200px;
+    border-radius: .5em;
+}
+.notfound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: rgb(107, 42, 107);
+}

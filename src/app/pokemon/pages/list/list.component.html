@@ -1,0 +1,12 @@
+<div class="list">
+    <app-searchbox/>
+    <p *ngIf="filteredPokemonList===undefined">Cargando...</p>
+    <p *ngIf="filteredPokemonList!==undefined && filteredPokemonList.length===0">No hay resultados para tu búsqueda</p>
+    <div class="pokemons">
+        @for (pokemon of filteredPokemonList; track $index) {
+            <div class="pokemon">
+                <a routerLink="/pokemon/list/{{pokemon.name}}"><p>{{pokemon.name}}</p></a>
+            </div>
+        }
+    </div>
+</div>
